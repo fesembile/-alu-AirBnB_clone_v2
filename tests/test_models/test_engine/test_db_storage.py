@@ -64,8 +64,12 @@ class TestDBStorage(unittest.TestCase):
         city.state_id = state.id
         city.save()
 
+        user = User(name="Chyna")  # Create a user object
+        user.save()
+
         place = Place(name="Palace", number_rooms=4)
-        place.city_id = city.id  # Assign a valid value to city_id
+        place.city_id = city.id
+        place.user_id = user.id  # Assign a valid value to user_id
         place.save()
 
         self.assertTrue(place.id in self.storage.all())
