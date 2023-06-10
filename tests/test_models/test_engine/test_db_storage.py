@@ -34,6 +34,7 @@ class TestDBStorage(unittest.TestCase):
         """ test user """
         city = City(name="Batch")
         state = State()
+        state.save()
         city.state_id = state.id
         city.save()
         self.assertTrue(city.id in self.storage.all())
