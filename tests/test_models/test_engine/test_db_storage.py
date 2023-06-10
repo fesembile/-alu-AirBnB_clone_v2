@@ -33,7 +33,7 @@ class TestDBStorage(unittest.TestCase):
     def test_city(self):
         """ test city """
         city = City(name="Batch")
-        state = State(name="Some State")  # Provide a name for the State instance
+        state = State(name="California")  # Provide a name for the State instance
         state.save()
         city.state_id = state.id
         city.save()
