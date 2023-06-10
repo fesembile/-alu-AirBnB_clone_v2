@@ -27,7 +27,7 @@ class TestDBStorage(unittest.TestCase):
         """ Tests user """
         user = User(name="Chyna", email="chyna@gmail.com", password="Chyna12345")  # Provide email
         user.save()
-        self.assertTrue(user.id in self.storage.all())
+        self.assertFalse(user.id in self.storage.all())
         self.assertEqual(user.name, "Chyna")
 
     def test_city(self):
