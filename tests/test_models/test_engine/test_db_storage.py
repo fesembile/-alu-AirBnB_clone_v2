@@ -42,16 +42,13 @@ class TestDBStorage(unittest.TestCase):
     
     def test_city(self):
         """ test city """
-        state = State(name="California")  # Provide a name for the State object
+        state = State(name="California")
         state.save()
-
         city = City(name="Batch")
         city.state_id = state.id
         city.save()
-
         self.assertTrue(city.id in self.storage.all())
         self.assertEqual(city.name, "Batch")
-
 
     def test_state(self):
         """ test state"""
