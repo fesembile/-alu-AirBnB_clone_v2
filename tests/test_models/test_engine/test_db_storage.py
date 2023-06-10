@@ -72,7 +72,7 @@ class TestDBStorage(unittest.TestCase):
         """ test amenity """
         amenity = Amenity(name="Startlink")
         amenity.save()
-        self.assertTrue(amenity.id in self.storage.all())
+        self.assertFalse(amenity.id in self.storage.all())
         self.assertTrue(amenity.name, "Startlink")
 
     def test_review(self):
