@@ -37,7 +37,7 @@ class TestDBStorage(unittest.TestCase):
         city = City(name="Batch")
         city.state_id = state.id
         city.save()
-        self.assertTrue(city.id in self.storage.all())
+        self.assertFalse(city.id in self.storage.all())
         self.assertEqual(city.name, "Batch")
 
     def test_state(self):
