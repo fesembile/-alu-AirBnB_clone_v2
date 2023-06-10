@@ -29,6 +29,16 @@ class TestDBStorage(unittest.TestCase):
         user.save()
         self.assertTrue(user.id in self.storage.all())
         self.assertEqual(user.name, "Chyna")
+    
+    def test_city(self):
+        """ test city """
+        city = City(name="Batch")
+        state = State(name="Some State")  # Provide a name for the State instance
+        state.save()
+        city.state_id = state.id
+        city.save()
+        self.assertTrue(city.id in self.storage.all())
+        self.assertEqual(city.name, "Batch")
 
     def test_city(self):
         """ test city """
