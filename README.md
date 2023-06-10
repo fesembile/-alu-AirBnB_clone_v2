@@ -142,5 +142,5 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 <br>
 
 <center> <h2>V2 Authors</h2> </center>
-Fese Mbile <f.mbile@alustudent.com>
+Fese Mbile <f.mbile@alustudent.com>  
 Walter Omukuyia Angoye <w.angoye@alustudent.com>
