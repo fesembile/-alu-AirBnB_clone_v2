@@ -40,15 +40,15 @@ class TestDBStorage(unittest.TestCase):
         self.assertTrue(city.id in self.storage.all())
         self.assertEqual(city.name, "Batch")
 
-    def test_city(self):
-        """ test city """
-        city = City(name="Batch")
-        state = State()
-        state.save()
-        city.state_id = state.id
-        city.save()
-        self.assertTrue(city.id in self.storage.all())
-        self.assertEqual(city.name, "Batch")
+    # def test_city(self):
+    #     """ test city """
+    #     city = City(name="Batch")
+    #     state = State()
+    #     state.save()
+    #     city.state_id = state.id
+    #     city.save()
+    #     self.assertTrue(city.id in self.storage.all())
+    #     self.assertEqual(city.name, "Batch")
 
     def test_state(self):
         """ test state"""
