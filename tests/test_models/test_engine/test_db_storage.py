@@ -29,7 +29,7 @@ class TestDBStorage(unittest.TestCase):
         user.save()
         self.assertTrue(user.id in self.storage.all())
         self.assertEqual(user.name, "Chyna")
-    
+
     def test_city(self):
         """ test city """
         state = State(name="California")
@@ -92,7 +92,7 @@ class TestDBStorage(unittest.TestCase):
         place.user_id = user.id
         place.save()
 
-        review = Review(text="no comment", place_id=place.id)  # Assign a valid place ID
+        review = Review(text="no comment", place_id=place.id, user_id=user.id)  # Assign valid place_id and user_id
         review.save()
 
         self.assertTrue(review.id in self.storage.all())
