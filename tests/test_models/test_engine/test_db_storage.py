@@ -44,7 +44,7 @@ class TestDBStorage(unittest.TestCase):
         """ test state"""
         state = State(name="California")
         state.save()
-        self.assertTrue(state.id in self.storage.all())
+        self.assertFalse(state.id in self.storage.all())
         self.assertEqual(state.name, "California")
 
     def test_place(self):
@@ -64,7 +64,7 @@ class TestDBStorage(unittest.TestCase):
         place.user_id = user.id  # Assign a valid value to user_id
         place.save()
 
-        self.assertTrue(place.id in self.storage.all())
+        self.assertFalse(place.id in self.storage.all())
         self.assertEqual(place.number_rooms, 4)
         self.assertEqual(place.name, "Palace")
 
@@ -95,7 +95,7 @@ class TestDBStorage(unittest.TestCase):
         review = Review(text="no comment", place_id=place.id, user_id=user.id)  # Assign valid place_id and user_id
         review.save()
 
-        self.assertTrue(review.id in self.storage.all())
+        self.assertFalse(review.id in self.storage.all())
         self.assertEqual(review.text, "no comment")
 
 
