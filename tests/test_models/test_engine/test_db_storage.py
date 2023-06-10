@@ -31,7 +31,7 @@ class TestDBStorage(unittest.TestCase):
         self.assertEqual(user.name, "Chyna")
 
     def test_city(self):
-        """ test user """
+        """ test city """
         city = City(name="Batch")
         state = State()
         state.save()
