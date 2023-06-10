@@ -142,5 +142,5 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 <br>
 
 ### V2 Authors
-Fese Mbile <f.mbile@alustudent.com>  
-Walter Omukuyia Angoye <w.angoye@alustudent.com>
+Fese Mbile  
+Walter Omukuyia Angoye
