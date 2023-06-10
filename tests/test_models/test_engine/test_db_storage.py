@@ -56,7 +56,7 @@ class TestDBStorage(unittest.TestCase):
     #     self.assertEqual(place.name, "Palace")
 
     def test_place(self):
-        """ test place """
+        """Test place"""
         state = State(name="California")
         state.save()
 
@@ -64,7 +64,7 @@ class TestDBStorage(unittest.TestCase):
         city.state_id = state.id
         city.save()
 
-        user = User(name="Chyna")  # Create a user object
+        user = User(name="Chyna", email="chyna@example.com")  # Provide a valid email
         user.save()
 
         place = Place(name="Palace", number_rooms=4)
