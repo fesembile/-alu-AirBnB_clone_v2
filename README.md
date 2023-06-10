@@ -141,6 +141,6 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 ```
 <br>
 
-### V2 Authors
+### HBNB V2 Authors
 Fese Mbile  
 Walter Omukuyia Angoye
